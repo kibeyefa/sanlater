@@ -1,0 +1,210 @@
+:root {
+    --margin-bottom: 15px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1em;
+    font-family: sans-serif;
+    background: linear-gradient(90deg, rgb(123, 191, 243), rgb(90, 178, 245));
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo {
+    font-variant: small-caps;
+    color: white;
+    font-weight: bolder;
+}
+
+header {
+    margin: 2rem auto;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    margin-top: 100px;
+}
+
+main .container {
+    text-align: center;
+}
+
+main .add-copy {
+    color: black;
+    font-weight: bolder;
+    font-size: 18px;
+    opacity: 0.7;
+    margin-bottom: var(--margin-bottom);
+    font-variant: small-caps;
+    letter-spacing: 2px;
+}
+
+main h1 {
+    font-size: 1.7rem;
+    margin: 0;
+    margin-bottom: var(--margin-bottom);
+}
+
+.emphasis {
+    color: red;
+    font-size: 2.5rem;
+}
+
+main p {
+    line-height: 25px;
+    margin-bottom: var(--margin-bottom);
+}
+
+main form {
+    margin-bottom: var(--margin-bottom);
+}
+
+input {
+    max-width: 300px;
+    padding: 5px 10px;
+    height: 35px;
+    outline: none;
+    margin-bottom: calc(var(--margin-bottom) / 2);
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+button {
+    padding: 7px 10px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background: black;
+    cursor: pointer;
+}
+
+.contact a {
+    color: rgb(34, 14, 211);
+    font-size: 1.2rem;
+}
+
+main .left {
+    max-width: 400px;
+    margin-bottom: 30px;
+}
+
+main img {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+/* FEATURES SECTION */
+.features {
+    text-align: center;
+    margin-top: 50px;
+    background: white;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.features > .container {
+    background: white;
+}
+
+h2 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin-bottom: calc(var(--margin-bottom) * 4);
+    position: relative;
+}
+
+h2::before {
+    position: absolute;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    box-shadow: 2px 2px 7px grey;
+    border-radius: 10px;
+    padding: 10px 20px;
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.headline {
+    margin-bottom: var(--margin-bottom);
+    font-variant: small-caps;
+    font-size: 18px;
+}
+.card img {
+    width: 50%;
+    /* height: 40%; */
+    margin: var(--margin-bottom) 0;
+}
+
+.card p {
+    line-height: 22px;
+    /* font-size: 14px; */
+    margin-bottom: var(--margin-bottom);
+}
+
+@media screen and (min-width: 600px) {
+    main .container {
+        display: flex;
+        text-align: left;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    main img {
+        width: 400px;
+        justify-self: flex-end;
+    }
+
+    .cards {
+        box-sizing: border-box;
+        width: 100%;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .card {
+        height: 300px;
+        transition: transform 0.3s ease-in-out;
+    }
+}
+
+@media screen and (min-width: 850px) {
+    .card:hover {
+        transform: translateY(-10px);
+    }
+}
