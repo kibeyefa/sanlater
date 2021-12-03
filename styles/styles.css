@@ -15,7 +15,7 @@ html {
 body {
     font-size: 1em;
     font-family: sans-serif;
-    background: linear-gradient(90deg, rgb(123, 191, 243), rgb(90, 178, 245));
+    background: linear-gradient(90deg, #4762f1, #304be6);
 }
 
 .container {
@@ -45,6 +45,10 @@ header .container {
     align-items: center;
 }
 
+header a {
+    color: #404143;
+}
+
 main {
     margin-top: 100px;
 }
@@ -72,6 +76,7 @@ main h1 {
 .emphasis {
     color: red;
     font-size: 2.5rem;
+    text-transform: uppercase;
 }
 
 main p {
@@ -85,6 +90,7 @@ main form {
 
 input {
     max-width: 300px;
+    width: 65%;
     padding: 5px 10px;
     height: 35px;
     outline: none;
@@ -99,7 +105,7 @@ button {
     border-radius: 10px;
     border: none;
     color: white;
-    background: black;
+    background: #4d026bb6;
     cursor: pointer;
 }
 
@@ -165,17 +171,31 @@ h2::before {
 }
 .card img {
     width: 50%;
-    /* height: 40%; */
     margin: var(--margin-bottom) 0;
 }
 
 .card p {
     line-height: 22px;
-    /* font-size: 14px; */
     margin-bottom: var(--margin-bottom);
 }
 
 @media screen and (min-width: 600px) {
+    .cards {
+        box-sizing: border-box;
+        width: 100%;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1.2fr));
+        gap: auto;
+    }
+
+    .card {
+        height: 300px;
+        transition: transform 0.3s ease-in-out;
+    }
+}
+
+@media screen and (min-width: 700px) {
     main .container {
         display: flex;
         text-align: left;
@@ -186,20 +206,6 @@ h2::before {
     main img {
         width: 400px;
         justify-self: flex-end;
-    }
-
-    .cards {
-        box-sizing: border-box;
-        width: 100%;
-        display: grid;
-        justify-items: center;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 20px;
-    }
-
-    .card {
-        height: 300px;
-        transition: transform 0.3s ease-in-out;
     }
 }
 
