@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap');
 :root {
     --margin-bottom: 15px;
 }
@@ -14,8 +15,8 @@ html {
 
 body {
     font-size: 1em;
-    font-family: sans-serif;
-    background: linear-gradient(90deg, #4762f1, #304be6);
+    font-family: monserat, sans-serif;
+    background: linear-gradient(90deg, #657cf2, #adb8f7);
 }
 
 .container {
@@ -33,6 +34,7 @@ a {
     font-variant: small-caps;
     color: white;
     font-weight: bolder;
+    /* font-family: poppins, sans-serif; */
 }
 
 header {
@@ -110,8 +112,20 @@ button {
 }
 
 .contact a {
-    color: rgb(34, 14, 211);
+    font-weight: bold;
     font-size: 1.2rem;
+}
+
+.bi-facebook {
+    color: #0400ff;
+}
+
+.bi-twitter {
+    color: #160bdf;
+}
+
+.bi-instagram {
+    color: rgba(255, 25, 0, 0.775);
 }
 
 main .left {
