@@ -31,10 +31,19 @@ a {
 }
 
 .logo {
-    font-variant: small-caps;
+    letter-spacing: 1px;
+    color: black;
     color: white;
     font-weight: bolder;
-    /* font-family: poppins, sans-serif; */
+    font-family: 'solomon sans';
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo__img {
+    width: 30px;
+    margin-right: 5px;
 }
 
 header {
@@ -76,8 +85,11 @@ main h1 {
 }
 
 .emphasis {
-    color: red;
+    color: whitesmoke;
+    font-family: 'Solomon Sans Bold', sans-serif;
+    letter-spacing: 2px;
     font-size: 2.5rem;
+    font-weight: bold;
     text-transform: uppercase;
 }
 
@@ -219,7 +231,7 @@ h2::before {
     }
 
     main img {
-        width: 400px;
+        width: 500px;
         justify-self: flex-end;
     }
 
