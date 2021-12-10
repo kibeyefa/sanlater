@@ -20,7 +20,7 @@ modalErrorBtn.addEventListener('click', () => {
 
 emailForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    let res = await fetch('http://127.0.0.1:8000/api/email/', {
+    let res = await fetch('https://sanlater.herokuapp.com/api/email/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
