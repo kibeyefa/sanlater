@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="styles/styles.css" />
         <link rel="stylesheet" href="bootsrapicons/bootstrap-icons.css" />
     </head>
+
     <body>
         <header>
             <div class="container">
@@ -20,7 +21,6 @@
                 <!-- <a href="#features"></a> -->
             </div>
         </header>
-
         <main>
             <div class="container">
                 <section class="left">
@@ -29,13 +29,11 @@
                         Get now, pay later with
                         <span class="emphasis">zero interest</span>
                     </h1>
-
                     <p>
                         Buy anything you want: food, shoes, clothes, accessories
                         and pay back by installment within six weeks.
                     </p>
-
-                    <form name="contact" netlify>
+                    <form name="contact">
                         <input
                             type="email"
                             placeholder="sanlater@support.com"
@@ -44,21 +42,30 @@
                         />
                         <button type="submit">Get Early Access</button>
                     </form>
-
                     <div class="contact">
                         Follow us:
-                        <a href="" class="bi bi-facebook"></a>
-                        <a href="" class="bi bi-twitter"></a>
-                        <a href="" class="bi bi-instagram"></a>
+                        <a
+                            href="https://www.facebook.com/SanlaterAfrica/"
+                            class="bi bi-facebook"
+                            target="_blank"
+                        ></a>
+                        <a
+                            href="https://www.twitter.com/SanlaterAfrica/"
+                            class="bi bi-twitter"
+                            target="_blank"
+                        ></a>
+                        <a
+                            href="https://www.instagram.com/SanlaterAfrica/"
+                            class="bi bi-instagram"
+                            target="_blank"
+                        ></a>
                     </div>
                 </section>
-
                 <section class="right">
                     <img src="assets/illustration.svg" alt="" />
                 </section>
             </div>
         </main>
-
         <div id="features" class="features">
             <div class="container">
                 <h2>features</h2>
@@ -72,7 +79,6 @@
                             your back.
                         </p>
                     </div>
-
                     <div class="card">
                         <img
                             src="assets/undraw_online_shopping_re_k1sv.svg"
@@ -84,7 +90,6 @@
                             thinking.
                         </p>
                     </div>
-
                     <div class="card">
                         <img
                             src="assets/home-delivery-service-review.png"
@@ -109,5 +114,27 @@
                 </div>
             </div>
         </div>
+
+        <div class="overlay hide"></div>
+        <div class="modal hide">
+            <div class="modal__main">
+                <div class="bi bi-check-circle-fill"></div>
+                <p>Email sent succefully</p>
+                <button class="modal__btn bi bi-arrow-left">Go back</button>
+            </div>
+        </div>
+        <div class="modal__error hide">
+            <div class="modal__main">
+                <div class="bi bi-x-circle-fill"></div>
+                <p>
+                    An error occured, ensure the email is correct and try again
+                </p>
+                <button class="modal__error__btn bi bi-arrow-left">
+                    Go back
+                </button>
+            </div>
+        </div>
+
+        <script src="app.js"></script>
     </body>
 </html>
