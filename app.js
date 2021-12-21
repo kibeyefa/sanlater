@@ -19,14 +19,16 @@ modalErrorBtn.addEventListener('click', () => {
 });
 
 emailForm.addEventListener('submit', async (e) => {
+    let email = emailForm.email.value;
+    emailForm.reset();
     e.preventDefault();
-    let res = await fetch('https://sanlater.herokuapp.com/api/email/', {
+    let res = await fetch('http://127.0.0.1:8000/api/email/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            email: emailForm.email.value,
+            email: email,
         }),
     });
     console.log(res);
@@ -40,5 +42,4 @@ emailForm.addEventListener('submit', async (e) => {
     } else {
         modal_error.style.display = 'grid';
     }
-    emailForm.reset();
 });
