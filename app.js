@@ -1,4 +1,5 @@
 let emailForm = document.forms[0];
+const btn_submit = document.getElementById('btn_submit');
 const body = document.body;
 const overlay = document.querySelector('.overlay');
 const modal = document.querySelector('.modal');
@@ -19,9 +20,10 @@ modalErrorBtn.addEventListener('click', () => {
 });
 
 emailForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    btn_submit.disabled = true;
     let email = emailForm.email.value;
     emailForm.reset();
-    e.preventDefault();
     let res = await fetch('https://sanlater.herokuapp.com/api/email/', {
         method: 'POST',
         headers: {
@@ -32,6 +34,7 @@ emailForm.addEventListener('submit', async (e) => {
         }),
     });
     console.log(res);
+    btn_submit.disabled = false;
 
     overlay.classList.remove('hide');
     overlay.classList.remove('hide');
